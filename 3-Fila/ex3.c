@@ -1,3 +1,13 @@
+/*
+Escreva uma função em C que recebe duas filas, "f1" e "f2", ambas contendo números inteiros.
+Os elementos dessas filas apresentam-se em ordem crescente, ou seja, o menor valor de cada
+fila encontra-se no início dela. A partir delas, crie uma terceira fila de números inteiros
+também em ordem crescente formada pelos elementos que se encontram nas filas "f1" e "f2".
+Por exemplo, se f1 = {2, 10, 15, 25}, onde 2 é o início da fila, e f2 = {3, 5, 9, 15}, onde
+3 é o início, a fila "f3" construída deve ser {2, 3, 5, 9, 10, 15, 15, 25}, onde 2 é o início
+e 25 é o fim da fila.
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 

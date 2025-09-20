@@ -1,3 +1,11 @@
+/*
+Implemente um programa em C que manipule 3 filas de números inteiros. A primeira,
+chamada de "f", deve conter os números de 1 até 15. A segunda, chamada de "f_par",
+está inicialmente vazia, assim como a terceira, chamada de "f_impar". O programa
+deve transferir os números pares de "f" para a fila "f_par" e os números ímpares
+de "f" para a fila "f_impar"
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 

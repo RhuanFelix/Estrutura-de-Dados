@@ -1,3 +1,10 @@
+/*
+Implemente um programa em C que manipule 2 filas de char. A primeira, chamada de "f1",
+deve conter os caracteres A, C, E, G, I, K, M, O, Q, S, U, W e Y. A segunda, chamada
+de "f2", deve conter os caracteres B, D, F, H, J, L, N, P, R, T, V e Z. O programa
+deve exibir o alfabeto na ordem de A até Z.
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 
