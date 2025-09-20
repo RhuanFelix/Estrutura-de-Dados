@@ -55,22 +55,37 @@ int pop(PILHA * p){
     }
 }
 
+void removerElemento(PILHA *p, int valor) {
+    ELEMENTO *atual = p->topo;
+    ELEMENTO *anterior = NULL;
+    while (atual != NULL) {
+        if (atual->valor == valor) {
+            if (anterior == NULL) {
+                p->topo = atual->proximo;
+            } else {
+                anterior->proximo = atual->proximo;
+            }
+            free(atual);
+            p->tamanho--;
+            return;
+        }
+        anterior = atual;
+        atual = atual->proximo;
+    }
+}
+
 void excluirMaiorMenor(PILHA * p){
+    if (empty(p)) return;
     ELEMENTO * e = p->topo;
     int maior = e->valor;
     int menor = e->valor;
     while(e != NULL){
-        if(e->valor > maior){
-            maior = e->valor;
-        } else{
-            menor = e->valor;
-        }
+        if(e->valor > maior) maior = e->valor;
+        if(e->valor < menor) menor = e->valor;
         e = e->proximo;
     }
-    free(maior);
-    free(menor);
-    printf("\n");
-
+    removerElemento(p, maior);
+    removerElemento(p, menor);
 }
 
 int main(){
@@ -81,6 +96,12 @@ int main(){
     push(p, 50);
     push(p, 40);
     excluirMaiorMenor(p);
+
+    ELEMENTO * e = p->topo;
+    while (e != NULL) {
+        printf("%d ", e->valor);
+        e = e->proximo;
+    }
 
     return 0;
 }

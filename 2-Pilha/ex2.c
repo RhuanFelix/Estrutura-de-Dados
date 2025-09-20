@@ -1,3 +1,8 @@
+/*
+Crie um programa em C que consiga determinar se uma expressão de entrada está balanceada. Dica: use uma pilha.
+Empilhe o oposto do símbolo a ser verificado e desempilhe quando forem iguais.
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
